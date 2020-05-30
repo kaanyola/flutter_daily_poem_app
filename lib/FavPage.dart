@@ -9,13 +9,12 @@ class _FavPageState extends State<FavPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text("This will be apps fav page."),
             Icon(Icons.favorite)
           ],
-        ),
       ),
     );
   }
