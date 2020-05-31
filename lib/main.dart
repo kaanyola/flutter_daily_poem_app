@@ -1,6 +1,8 @@
+import 'package:daily_poem_app/model/Siir.dart';
 import 'package:flutter/material.dart';
 import 'package:daily_poem_app/HomePage.dart';
 import 'package:daily_poem_app/FavPage.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -9,10 +11,21 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
+List<String> lines = [
+  "Öyle sevdim ki seni",
+  "Öylesine sensin ki!",
+  "Kuşlar gibi cıvıldar",
+  "Tattırdığın acılar."
+];
+Siir siir1 = new Siir(
+    name: "Park", poetName: "Cemal Süreya", lines: lines, favCount: 354);
+
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Daily Poem App", home: _tabController(context));
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.pink),
+      title: "Daily Poem App", home: _tabController(context),);
   }
 }
 
@@ -26,13 +39,14 @@ DefaultTabController _tabController(BuildContext context) {
     length: 2,
     child: Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Daily Poem App")),
+        backgroundColor: Colors.yellow,
+        title: Center(child: Text("Daily Poem App", style: TextStyle(color: Colors.black),)),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Material(
-          color: color1,
+          color: Colors.pink,
           child: TabBar(
-            indicatorColor: color2,
+            indicatorColor: Colors.lime,
             tabs: <Widget>[
               Tab(
                 icon: Icon(Icons.home),
@@ -46,8 +60,8 @@ DefaultTabController _tabController(BuildContext context) {
       ),
       body: TabBarView(
         children: <Widget>[
-          HomePage(),
-          FavPage(),
+          HomePage(siir1),
+          FavPage(siir1),
         ],
       ),
     ),
