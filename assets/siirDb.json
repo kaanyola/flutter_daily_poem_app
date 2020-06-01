@@ -1,0 +1,34 @@
+{
+    "data" : [
+        {
+            "sair": "Nazım Hikmet",
+            "title": "Belki Ben",
+            "lines": ["Demirci", "Toynağı", "Moruk", "Aynen"],
+            "favCount" : 354
+        },
+        {
+            "id": 2,
+            "sair": "Cemal Süreya",
+            "title": "Belki Ben",
+            "poem": "Belki Ben"
+        },
+        {
+            "id": 3,
+            "sair": "Edip Cansever",
+            "title": "Belki Ben",
+            "poem": "Belki Ben"
+        },
+        {
+            "id": 4,
+            "sair": "Turgut Uyar",
+            "title": "Belki Ben",
+            "poem": "Belki Ben"
+        },
+        {
+            "id": 5,
+            "sair": "Ece Ayhan",
+            "title": "Belki Ben",
+            "poem": "Belki Ben"
+        }
+    ]
+}
