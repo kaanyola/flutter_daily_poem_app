@@ -1,27 +1,41 @@
 import 'package:daily_poem_app/model/FavSiirler.dart';
+import 'package:daily_poem_app/model/Siir.dart';
 import 'package:flutter/material.dart';
 
-import 'model/Siir.dart';
-
-class HomePage extends StatefulWidget {
-  Siir siirMonitored;
-  HomePage(this.siirMonitored);
+class SelectedPoemPage extends StatefulWidget {
   FavSiirler favSiirler = FavSiirler();
-
+  Siir siirSelected;
+  SelectedPoemPage(this.siirSelected);
   @override
-  _HomePageState createState() => _HomePageState();
+  _SelectedPoemPageState createState() => _SelectedPoemPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SelectedPoemPageState extends State<SelectedPoemPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              colors: [Colors.pink, Colors.yellow])),
-      child: siirCard(context),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.pink),
+      title: "Daily Poem App",
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.yellow,
+          title: Center(
+            child: Text(
+              "Daily Poem App",
+              style: TextStyle(color: Colors.black),
+            ),
+          ),
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
+                  colors: [Colors.pink, Colors.yellow])),
+          child: siirCard(context),
+        ),
+      ),
     );
   }
 
@@ -37,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Spacer(),
-              Text(widget.siirMonitored.poetName,
+              Text(widget.siirSelected.poetName,
                   style: TextStyle(
                       color: Colors.white,
                       letterSpacing: 1,
@@ -51,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Text(widget.siirMonitored.name,
+                Text(widget.siirSelected.name,
                     style: TextStyle(
                         letterSpacing: 1,
                         fontSize: 35,
@@ -63,12 +77,12 @@ class _HomePageState extends State<HomePage> {
           Flexible(
             flex: 100,
             child: ListView.builder(
-                itemCount: widget.siirMonitored.lines.length,
+                itemCount: widget.siirSelected.lines.length,
                 itemBuilder: (context, int index) {
                   return Align(
                     alignment: Alignment.center,
                     child: Text(
-                      widget.siirMonitored.lines[index],
+                      widget.siirSelected.lines[index],
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.white,
@@ -81,7 +95,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Text(
-                "${widget.siirMonitored.favCount}",
+                "${widget.siirSelected.favCount}",
                 style: TextStyle(color: Colors.white),
               ),
               Icon(
@@ -101,13 +115,13 @@ class _HomePageState extends State<HomePage> {
             ),
             onPressed: () {
               setState(() {
-                if (widget.favSiirler.favoriSiirler.contains(widget.siirMonitored)) {
-                  widget.favSiirler.favoriSiirler.remove(widget.siirMonitored);
-                  widget.siirMonitored.favCount--;
+                if (widget.favSiirler.favoriSiirler.contains(widget.siirSelected)) {
+                  widget.favSiirler.favoriSiirler.remove(widget.siirSelected);
+                  widget.siirSelected.favCount--;
                 }
                 else{
-                  widget.favSiirler.favoriSiirler.add(widget.siirMonitored);
-                  widget.siirMonitored.favCount++;
+                  widget.favSiirler.favoriSiirler.add(widget.siirSelected);
+                  widget.siirSelected.favCount++;
                 }
               });
             },
@@ -118,7 +132,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget butonSec() {
-    if (widget.favSiirler.favoriSiirler.contains(widget.siirMonitored)) {
+    if (widget.favSiirler.favoriSiirler.contains(widget.siirSelected)) {
       return Text("Favoriden Çıkart", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),);
     } else {
       return Text("Favorilere Ekle",  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14));
@@ -126,8 +140,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget iconSec(){
-    if (widget.favSiirler.favoriSiirler.contains(widget.siirMonitored)) {
-      return Icon(Icons.remove, size: 14);
+    if (widget.favSiirler.favoriSiirler.contains(widget.siirSelected)) {
+      return Icon(Icons.remove, size: 14,);
     } else {
       return Icon(Icons.favorite_border, size: 14,);
     }
