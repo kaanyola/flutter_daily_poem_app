@@ -1,8 +1,10 @@
+import 'package:daily_poem_app/api/siirApi.dart';
 import 'package:daily_poem_app/model/Siir.dart';
 import 'package:flutter/material.dart';
 import 'package:daily_poem_app/HomePage.dart';
 import 'package:daily_poem_app/FavPage.dart';
 import 'package:daily_poem_app/model/FavSiirler.dart';
+import 'dart:convert';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +20,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Future<Siir> futureSiir;
+  
+
+  @override
+  void initState(){
+    super.initState();
+    futureSiir = fetchSiir();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -60,7 +71,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: TabBarView(
           children: <Widget>[
-            HomePage(widget.siirMonitored),
+            HomePage(futureSiir),
             FavPage(),
           ],
         ),

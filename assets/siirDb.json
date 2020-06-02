@@ -1,34 +1,105 @@
 {
     "data" : [
         {
+            "id" : 1,
             "sair": "Nazım Hikmet",
-            "title": "Belki Ben",
-            "lines": ["Demirci", "Toynağı", "Moruk", "Aynen"],
+            "title": "Tahirle Zühre Meselesi",
+            "lines": ["Tahir olmak da ayıp değil Zühre olmak da",
+                "hattâ sevda yüzünden ölmek de ayıp değil,",
+                "bütün iş Tahirle Zühre olabilmekte",
+                "yani yürekte.",
+                " ",
+                "Meselâ bir barikatta dövüşerek",
+                "meselâ kuzey kutbunu keşfe giderken",
+                "meselâ denerken damarlarında bir serumu",
+                                                          "ölmek ayıp olur mu?",
+                
+                "Tahir olmak da ayıp değil Zühre olmak da",
+                "hattâ sevda yüzünden ölmek de ayıp değil.",
+                
+                "Seversin dünyayı doludizgin",
+                "ama o bunun farkında değildir",
+                "ayrılmak istemezsin dünyadan",
+                "ama o senden ayrılacak",
+                "yani sen elmayı seviyorsun diye",
+                "elmanın da seni sevmesi şart mı?",
+                "Yani Tahiri Zühre sevmeseydi artık",
+                ",yahut hiç sevmeseydi",
+                "Tahir ne kaybederdi Tahirliğinden?",
+                
+                "Tahir olmak da ayıp değil Zühre olmak da",
+                "hattâ sevda yüzünden ölmek de ayıp değil."],
             "favCount" : 354
         },
         {
             "id": 2,
             "sair": "Cemal Süreya",
             "title": "Belki Ben",
-            "poem": "Belki Ben"
+            "lines": ["Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar."],
+            "favCount": 456
         },
         {
             "id": 3,
             "sair": "Edip Cansever",
             "title": "Belki Ben",
-            "poem": "Belki Ben"
+            "lines" : [
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar.",
+                "Tattırdığın acılar.",
+                "Öyle sevdim ki seni",
+                "Öylesine sensin ki!",
+                "Kuşlar gibi cıvıldar",
+                "Tattırdığın acılar."
+              ],
+            "favCount" : 56
         },
         {
             "id": 4,
             "sair": "Turgut Uyar",
-            "title": "Belki Ben",
-            "poem": "Belki Ben"
+            "title": "Martılar",
+            "lines": [
+                "FFŞLDSFKŞD",
+                "flşdsfkld",
+                "flşkfglşd",
+                "flşdskfşdslf",
+                "flşdkflşd"
+            ],
+            "favCount": 5443
+            
         },
         {
             "id": 5,
             "sair": "Ece Ayhan",
             "title": "Belki Ben",
-            "poem": "Belki Ben"
+            "lines": ["Demirci", "Toynağı", "Moruk", "Aynen","Demirci", "Toynağı", "Moruk", "Aynen","Demirci", "Toynağı", "Moruk", "Aynen"],
+            "favCount": 564
         }
     ]
 }
